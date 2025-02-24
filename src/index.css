@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes earthquake-days {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    transform: translate(-3px, 2px) rotate(-0.8deg);
+  }
+  50% {
+    transform: translate(2px, -2px) rotate(0.5deg);
+  }
+  75% {
+    transform: translate(-2px, -3px) rotate(0.7deg);
+  }
+}
+
+@keyframes earthquake-hours {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    transform: translate(2px, 3px) rotate(0.6deg);
+  }
+  50% {
+    transform: translate(-2px, -1px) rotate(-0.4deg);
+  }
+  75% {
+    transform: translate(3px, 2px) rotate(-0.7deg);
+  }
+}
+
+@keyframes earthquake-minutes {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    transform: translate(-2px, -2px) rotate(0.5deg);
+  }
+  50% {
+    transform: translate(3px, 1px) rotate(-0.6deg);
+  }
+  75% {
+    transform: translate(-1px, 3px) rotate(0.4deg);
+  }
+}
+
+@keyframes earthquake-seconds {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    transform: translate(2px, -3px) rotate(-0.5deg);
+  }
+  50% {
+    transform: translate(-3px, 2px) rotate(0.7deg);
+  }
+  75% {
+    transform: translate(1px, -2px) rotate(-0.4deg);
+  }
+}
+
+@keyframes glitch-1 {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(-2px, 2px);
+  }
+}
+
+@keyframes number-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(0.98);
+    text-shadow: 0 0 20px rgba(52, 211, 153, 0.8);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes energy-pulse {
+  0% {
+    transform: translateX(-50%) scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-50%) scaleX(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scaleX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes energy-pulse-delayed {
+  0% {
+    transform: translateX(-50%) scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-50%) scaleX(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scaleX(0);
+    opacity: 0;
+  }
+}
+
+.animate-earthquake-days {
+  animation: earthquake-days 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.animate-earthquake-hours {
+  animation: earthquake-hours 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.animate-earthquake-minutes {
+  animation: earthquake-minutes 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.animate-earthquake-seconds {
+  animation: earthquake-seconds 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.animate-glitch-1 {
+  animation: glitch-1 0.5s ease infinite;
+}
+
+.animate-glitch-2 {
+  animation: glitch-2 0.5s ease infinite;
+  animation-delay: 0.1s;
+}
+
+.animate-number-pulse {
+  animation: number-pulse 2s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-energy-pulse {
+  animation: energy-pulse 2s ease-in-out infinite;
+}
+
+.animate-energy-pulse-delayed {
+  animation: energy-pulse-delayed 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
