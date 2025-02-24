@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import bgVideo from './assets/hyperman-bg.mp4';
 
 function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState({
@@ -11,7 +12,7 @@ function CountdownTimer() {
   const [shake, setShake] = useState(false);
 
   useEffect(() => {
-    const launchDate = new Date('2024-04-01T00:00:00').getTime();
+    const launchDate = new Date('2025-02-25T16:00:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -83,7 +84,7 @@ function App() {
         muted 
         playsInline
       >
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-digital-art-of-a-human-face-97047-large.mp4" type="video/mp4" />
+        <source src={bgVideo} type="video/mp4" />
       </video>
 
       {/* Overlay */}
